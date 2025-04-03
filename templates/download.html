@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='loadfy.png') }}" type="image/x-icon" />
+    <title>Download File - Loadfy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #161c29;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #161c29;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        a.download-btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #bcbdc1;
+            color: #161c29;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a.download-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='loadfy2.png') }}" style="height: 100px;">
+        <h2>Your file is ready to download!</h2>
+        <div class="container">
+            <h1>Download Your File</h1>
+    
+            <!-- 🎬 Video Başlığı -->
+            <h2>{{ title }}</h2>
+    
+            <!-- 🖼️ Thumbnail -->
+            <img class="thumbnail" src="{{ thumbnail }}" alt="Thumbnail" style="height: 200px">
+    
+            <!-- 📥 İndirme Linki -->
+            <br>
+        <p>Click the button below to start your download:</p>
+        <a class="download-btn" href="{{ url_for('static', filename='downloads/' + filename) }}" download>Download File</a>
+        </div>
+    </div>
+    <footer>
+        <h3>If any problems occur, contact me: delkaly@proton.me</h3>
+    </footer>
+</body>
+</html>

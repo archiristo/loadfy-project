@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='loadfy.png') }}" type="image/x-icon" />
+    <title>Loadfy - Best Online MP3 & Video Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #161c29;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input {
+            width: 60%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #bcbdc1;
+            color: #161c29;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #bcbdc1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='loadfy2.png') }}" style="height: 100px;">
+        <h1>Online MP4 & MP3 Downloader</h1>
+        <form action="/" method="POST">
+            <input type="text" name="url" placeholder="Enter video URL" required>
+            <br>
+            <button type="submit" name="format" value="mp4">Download MP4</button>
+            <button type="submit" name="format" value="mp3">Download MP3</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <h3>Important note:</h3>
+    
+    <p>Loadfy will not place ads on download buttons under any circumstances to maintain its safe image. You can choose Loadfy with confidence! :)</p>
+    <br>
+    <footer>
+        <h3>If any problems occur, contact me: delkaly@proton.me</h3>
+    </footer>
+</body>
+</html>
