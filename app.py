@@ -8,6 +8,7 @@ def download_video(url, format):
     ydl_opts = {
         'format': 'bestaudio/best' if format == 'mp3' else 'best',
         'outtmpl': 'static/downloads/%(title)s.%(ext)s',
+        'cookiefile': 'static/cookies.txt',
         'postprocessors': [{'key': 'FFmpegExtractAudio', 'preferredcodec': 'mp3'}] if format == 'mp3' else []
     }
     
